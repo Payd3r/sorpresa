@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
+import { useNavigate } from 'react-router-dom';
 
-const CongratulationsPage = ({ onRestart }) => {
+const CongratulationsPage = ({ onRestart, showNextButton = false }) => {
   const [showAnimation, setShowAnimation] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setShowAnimation(true);
@@ -81,13 +83,36 @@ const CongratulationsPage = ({ onRestart }) => {
 
           {/* Bottoni */}
           <div className="space-y-3">
-            <Button
-              onClick={onRestart}
-              className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 text-lg"
-              size="lg"
-            >
-              💕 Rigioca il cruciverba
-            </Button>
+            {/* Bottone principale - cambia in base a showNextButton */}
+            {showNextButton ? (
+              <Button
+                onClick={() => navigate('/photo-quiz')}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold py-3 text-lg"
+                size="lg"
+              >
+                🚀 Prosegui per la sfida successiva!
+              </Button>
+            ) : (
+              <Button
+                onClick={onRestart}
+                className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold py-3 text-lg"
+                size="lg"
+              >
+                💕 Rigioca il cruciverba
+              </Button>
+            )}
+            
+            {/* Bottone secondario */}
+            {showNextButton && (
+              <Button
+                onClick={onRestart}
+                variant="outline"
+                className="w-full border-2 border-purple-300 text-purple-700 hover:bg-purple-50 font-semibold py-2"
+                size="lg"
+              >
+                🔄 Rigioca il cruciverba
+              </Button>
+            )}
             
             <div className="text-xs text-slate-500 mt-4">
               Fatto con ❤️ per te
