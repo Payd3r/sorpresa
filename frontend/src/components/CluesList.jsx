@@ -10,8 +10,8 @@ const CluesList = ({ horizontalClues, verticalClues, onClueClick, selectedWord }
       <Button
         variant={isSelected ? "default" : "ghost"}
         className={`
-          w-full text-left p-3 h-auto whitespace-normal justify-start
-          transition-all duration-200 mb-2
+          w-full text-left p-2 h-auto whitespace-normal justify-start text-xs
+          transition-all duration-200 mb-1
           ${isSelected 
             ? 'bg-blue-600 text-white shadow-lg' 
             : 'bg-white hover:bg-blue-50 text-slate-700 border border-slate-200'
@@ -20,10 +20,10 @@ const CluesList = ({ horizontalClues, verticalClues, onClueClick, selectedWord }
         onClick={() => onClueClick(word)}
       >
         <div className="text-left">
-          <span className="font-bold text-sm">
+          <span className="font-bold">
             {word.number}.
           </span>
-          <span className="ml-2 text-sm leading-relaxed">
+          <span className="ml-1 leading-tight">
             {word.clue}
           </span>
         </div>
