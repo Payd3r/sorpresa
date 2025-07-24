@@ -53,13 +53,13 @@ const CrosswordGrid = ({
   };
 
   return (
-    <Card className="p-2 bg-gradient-to-br from-slate-50 to-blue-50 shadow-xl">
+    <Card className="p-1 bg-gradient-to-br from-slate-50 to-blue-50 shadow-xl">
       <div className="crossword-grid">
         <div 
-          className="grid gap-0.5 mx-auto"
+          className="grid gap-[1px] mx-auto"
           style={{
             gridTemplateColumns: `repeat(${grid[0]?.length || 0}, 1fr)`,
-            maxWidth: '100%',
+            maxWidth: '95vw',
             width: 'fit-content'
           }}
         >
