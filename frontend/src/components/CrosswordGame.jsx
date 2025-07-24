@@ -298,70 +298,66 @@ const CrosswordGame = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100 p-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold text-slate-800 mb-2">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-purple-50 to-pink-100">
+      <div className="max-w-md mx-auto">
+        {/* Header - più compatto */}
+        <div className="text-center py-4 px-4">
+          <h1 className="text-2xl font-bold text-slate-800 mb-1">
             💕 Cruciverba del Cuore 💕
           </h1>
-          <p className="text-slate-600">
+          <p className="text-sm text-slate-600 mb-3">
             Un cruciverba speciale pieno dei nostri ricordi
           </p>
           
-          {/* Progress */}
-          <div className="flex justify-center items-center mt-4 space-x-4">
-            <Badge variant="outline" className="text-sm">
-              Completate: {completedWords.length}/{crosswordLayout.words.length}
+          {/* Progress - più compatto */}
+          <div className="flex justify-center items-center space-x-3">
+            <Badge variant="outline" className="text-xs">
+              {completedWords.length}/{crosswordLayout.words.length}
             </Badge>
-            <Badge variant={isCompleted ? "default" : "secondary"} className="text-sm">
-              {isCompleted ? "✅ Completato!" : "🔄 In corso..."}
+            <Badge variant={isCompleted ? "default" : "secondary"} className="text-xs">
+              {isCompleted ? "✅ Fatto!" : "🔄 In corso"}
             </Badge>
           </div>
         </div>
 
         {/* Game Area */}
-        <div className="space-y-4">
-          {/* Griglia - sempre visibile e centrata */}
-          <div className="flex justify-center">
-            <div style={{ maxWidth: '90vw', overflow: 'hidden' }}>
-              <CrosswordGrid
-                grid={crosswordLayout.grid}
-                words={crosswordLayout.words}
-                userAnswers={userAnswers}
-                onCellClick={handleCellClick}
-                selectedWord={selectedWord}
-                selectedCell={selectedCell}
-              />
-            </div>
+        <div className="space-y-3">
+          {/* Griglia - centrata e ottimizzata */}
+          <div className="flex justify-center px-2">
+            <CrosswordGrid
+              grid={crosswordLayout.grid}
+              words={crosswordLayout.words}
+              userAnswers={userAnswers}
+              onCellClick={handleCellClick}
+              selectedWord={selectedWord}
+              selectedCell={selectedCell}
+            />
           </div>
           
-          {/* Controlli */}
-          <div className="flex flex-col sm:flex-row gap-3 px-4">
+          {/* Controlli - più compatti */}
+          <div className="flex gap-2 px-4">
             <Button
               onClick={handleConfirm}
-              className={`flex-1 ${
+              className={`flex-1 text-sm ${
                 isCompleted 
                   ? 'bg-green-600 hover:bg-green-700 text-white' 
                   : 'bg-blue-600 hover:bg-blue-700 text-white'
               }`}
-              size="lg"
             >
-              {isCompleted ? '🎉 Conferma Cruciverba!' : 'Conferma Cruciverba'}
+              {isCompleted ? '🎉 Conferma!' : 'Conferma'}
             </Button>
             
             <Button
               onClick={fillAllCells}
               variant="outline"
-              size="lg"
-              className="border-orange-300 text-orange-700 hover:bg-orange-50"
+              className="px-3 text-xs border-orange-300 text-orange-700 hover:bg-orange-50"
             >
-              🔧 Debug: Riempi tutto
+              🔧 Debug
             </Button>
           </div>
 
-          {/* Domande */}
-          <div className="px-4">
+          {/* Domande - scrollabili */}
+          <div className="px-4 max-h-64 overflow-y-auto">
             <CluesList
               horizontalClues={crosswordLayout.horizontalClues}
               verticalClues={crosswordLayout.verticalClues}
@@ -371,12 +367,11 @@ const CrosswordGame = () => {
           </div>
         </div>
 
-        {/* Istruzioni */}
-        <Card className="mt-6 bg-blue-50 border-blue-200">
-          <CardContent className="p-4">
-            <p className="text-sm text-blue-700 text-center">
-              💡 <strong>Come giocare:</strong> Tocca una domanda o una cella per iniziare a scrivere. 
-              Usa la tastiera per inserire le lettere. Le frecce per muoverti nella griglia.
+        {/* Istruzioni - più compatte */}
+        <Card className="mt-4 mx-4 bg-blue-50 border-blue-200">
+          <CardContent className="p-3">
+            <p className="text-xs text-blue-700 text-center">
+              💡 Tocca una domanda o cella per iniziare a scrivere
             </p>
           </CardContent>
         </Card>
