@@ -54,10 +54,18 @@ const CrosswordGame = () => {
     setSelectedCell({ row, col });
   }, [crosswordLayout, selectedWord]);
 
-  // Gestisce click su domanda
+  // Gestisce click su domanda e porta alla cella corrispondente
   const handleClueClick = useCallback((word) => {
     setSelectedWord(word);
     setSelectedCell({ row: word.row, col: word.col });
+    
+    // Scroll alla griglia se necessario
+    setTimeout(() => {
+      const gridElement = document.querySelector('.crossword-grid');
+      if (gridElement) {
+        gridElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
   }, []);
 
   // Gestisce input da tastiera
