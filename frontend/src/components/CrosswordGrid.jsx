@@ -104,12 +104,18 @@ const CrosswordGrid = ({
                   {!isBlack && (
                     <>
                       {cellNumber && (
-                        <span className="absolute top-0 left-0 text-[6px] leading-none text-blue-700 font-semibold px-0.5">
+                        <span 
+                          className="absolute top-0 left-0 leading-none text-blue-700 font-semibold px-0.5"
+                          style={{ fontSize: `${Math.max(6, cellSize * 0.25)}px` }}
+                        >
                           {cellNumber}
                         </span>
                       )}
-                      <div className="flex items-center justify-center h-full pt-1">
-                        <span className="text-slate-800 font-bold" style={{ fontSize: `${Math.max(8, Math.min(14, (90 * window.innerWidth / 100) / grid[0].length / 2))}px` }}>
+                      <div className="flex items-center justify-center h-full w-full">
+                        <span 
+                          className="text-slate-800 font-bold text-center"
+                          style={{ fontSize: `${Math.max(8, cellSize * 0.5)}px` }}
+                        >
                           {cellValue}
                         </span>
                       </div>
