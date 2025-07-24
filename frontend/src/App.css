@@ -32,3 +32,20 @@
         transform: rotate(360deg);
     }
 }
+
+/* Crossword specific styles */
+.crossword-grid {
+    touch-action: manipulation;
+    user-select: none;
+}
+
+.crossword-grid input {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.crossword-grid input::-webkit-outer-spin-button,
+.crossword-grid input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
