@@ -86,7 +86,10 @@ const CrosswordGrid = ({
                     }
                   `}
                   onClick={() => !isBlack && onCellClick(rowIndex, colIndex)}
-                  style={{ minWidth: '28px', minHeight: '28px' }}
+                  style={{ 
+                    minWidth: `${Math.max(24, Math.min(32, (90 * window.innerWidth / 100) / grid[0].length))}px`, 
+                    minHeight: `${Math.max(24, Math.min(32, (90 * window.innerWidth / 100) / grid[0].length))}px` 
+                  }}
                 >
                   {!isBlack && (
                     <>
