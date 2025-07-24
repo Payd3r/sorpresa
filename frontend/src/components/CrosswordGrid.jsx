@@ -71,24 +71,34 @@ const CrosswordGrid = ({
               const isCurrent = isCurrentCell(rowIndex, colIndex);
               const cellValue = getCellValue(rowIndex, colIndex);
 
+              const getCellSize = () => {
+                const screenWidth = window.innerWidth;
+                const gridCols = grid[0]?.length || 1;
+                const availableWidth = Math.min(screenWidth * 0.95, 400);
+                const cellSize = Math.floor(availableWidth / gridCols) - 1;
+                return Math.max(18, Math.min(cellSize, 35));
+              };
+
+              const cellSize = getCellSize();
+
               return (
                 <div
                   key={`${rowIndex}-${colIndex}`}
                   className={`
-                    relative aspect-square text-xs font-bold cursor-pointer
-                    transition-all duration-200 border-2
+                    relative text-xs font-bold cursor-pointer flex-shrink-0
+                    transition-all duration-200 border border-slate-300
                     ${isBlack 
                       ? 'bg-slate-800 border-slate-700' 
-                      : `bg-white border-slate-300 hover:border-blue-400
+                      : `bg-white hover:border-blue-400
                          ${isSelected ? 'bg-blue-100 border-blue-500' : ''}
-                         ${isCurrent ? 'bg-blue-200 border-blue-600 ring-2 ring-blue-400' : ''}
+                         ${isCurrent ? 'bg-blue-200 border-blue-600 ring-1 ring-blue-400' : ''}
                         `
                     }
                   `}
                   onClick={() => !isBlack && onCellClick(rowIndex, colIndex)}
                   style={{ 
-                    minWidth: `${Math.max(24, Math.min(32, (90 * window.innerWidth / 100) / grid[0].length))}px`, 
-                    minHeight: `${Math.max(24, Math.min(32, (90 * window.innerWidth / 100) / grid[0].length))}px` 
+                    width: `${cellSize}px`, 
+                    height: `${cellSize}px`
                   }}
                 >
                   {!isBlack && (
