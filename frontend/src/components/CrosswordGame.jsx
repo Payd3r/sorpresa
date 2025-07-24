@@ -252,13 +252,16 @@ const CrosswordGame = () => {
   };
 
   if (showCongratulations) {
-    return <CongratulationsPage onRestart={() => {
-      setShowCongratulations(false);
-      setUserAnswers({});
-      setSelectedWord(null);
-      setSelectedCell(null);
-      setIsCompleted(false);
-    }} />;
+    return <CongratulationsPage 
+      onRestart={() => {
+        setShowCongratulations(false);
+        setUserAnswers({});
+        setSelectedWord(null);
+        setSelectedCell(null);
+        setIsCompleted(false);
+      }} 
+      showNextButton={true}
+    />;
   }
 
   if (!crosswordLayout) {
