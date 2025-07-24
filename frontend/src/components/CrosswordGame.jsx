@@ -318,45 +318,47 @@ const CrosswordGame = () => {
         </div>
 
         {/* Game Area */}
-        <div className="grid lg:grid-cols-2 gap-6">
-          {/* Griglia */}
-          <div className="order-2 lg:order-1">
-            <CrosswordGrid
-              grid={crosswordLayout.grid}
-              words={crosswordLayout.words}
-              userAnswers={userAnswers}
-              onCellClick={handleCellClick}
-              selectedWord={selectedWord}
-              selectedCell={selectedCell}
-            />
-            
-            {/* Controlli */}
-            <div className="mt-4 flex flex-col sm:flex-row gap-3">
-              <Button
-                onClick={handleConfirm}
-                className={`flex-1 ${
-                  isCompleted 
-                    ? 'bg-green-600 hover:bg-green-700 text-white' 
-                    : 'bg-blue-600 hover:bg-blue-700 text-white'
-                }`}
-                size="lg"
-              >
-                {isCompleted ? '🎉 Conferma Cruciverba!' : 'Conferma Cruciverba'}
-              </Button>
-              
-              <Button
-                onClick={fillAllCells}
-                variant="outline"
-                size="lg"
-                className="border-orange-300 text-orange-700 hover:bg-orange-50"
-              >
-                🔧 Debug: Riempi tutto
-              </Button>
+        <div className="space-y-4">
+          {/* Griglia - sempre visibile e centrata */}
+          <div className="flex justify-center">
+            <div style={{ maxWidth: '90vw', overflow: 'hidden' }}>
+              <CrosswordGrid
+                grid={crosswordLayout.grid}
+                words={crosswordLayout.words}
+                userAnswers={userAnswers}
+                onCellClick={handleCellClick}
+                selectedWord={selectedWord}
+                selectedCell={selectedCell}
+              />
             </div>
+          </div>
+          
+          {/* Controlli */}
+          <div className="flex flex-col sm:flex-row gap-3 px-4">
+            <Button
+              onClick={handleConfirm}
+              className={`flex-1 ${
+                isCompleted 
+                  ? 'bg-green-600 hover:bg-green-700 text-white' 
+                  : 'bg-blue-600 hover:bg-blue-700 text-white'
+              }`}
+              size="lg"
+            >
+              {isCompleted ? '🎉 Conferma Cruciverba!' : 'Conferma Cruciverba'}
+            </Button>
+            
+            <Button
+              onClick={fillAllCells}
+              variant="outline"
+              size="lg"
+              className="border-orange-300 text-orange-700 hover:bg-orange-50"
+            >
+              🔧 Debug: Riempi tutto
+            </Button>
           </div>
 
           {/* Domande */}
-          <div className="order-1 lg:order-2 max-h-[600px] overflow-y-auto">
+          <div className="px-4">
             <CluesList
               horizontalClues={crosswordLayout.horizontalClues}
               verticalClues={crosswordLayout.verticalClues}
