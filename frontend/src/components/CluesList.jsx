@@ -32,18 +32,18 @@ const CluesList = ({ horizontalClues, verticalClues, onClueClick, selectedWord }
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3">
       {/* Orizzontali */}
       <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg font-bold text-blue-800 flex items-center">
-            <span className="bg-blue-600 text-white px-2 py-1 rounded text-sm mr-2">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base font-bold text-blue-800 flex items-center">
+            <span className="bg-blue-600 text-white px-1.5 py-0.5 rounded text-xs mr-2">
               →
             </span>
             Orizzontali
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-1">
+        <CardContent className="space-y-1 max-h-32 overflow-y-auto">
           {horizontalClues.map((word, index) => (
             <ClueItem key={`h-${word.number}`} word={word} index={index} />
           ))}
@@ -52,15 +52,15 @@ const CluesList = ({ horizontalClues, verticalClues, onClueClick, selectedWord }
 
       {/* Verticali */}
       <Card className="bg-gradient-to-r from-purple-50 to-pink-50 shadow-lg">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg font-bold text-purple-800 flex items-center">
-            <span className="bg-purple-600 text-white px-2 py-1 rounded text-sm mr-2">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-base font-bold text-purple-800 flex items-center">
+            <span className="bg-purple-600 text-white px-1.5 py-0.5 rounded text-xs mr-2">
               ↓
             </span>
             Verticali
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-1">
+        <CardContent className="space-y-1 max-h-32 overflow-y-auto">
           {verticalClues.map((word, index) => (
             <ClueItem key={`v-${word.number}`} word={word} index={index} />
           ))}
