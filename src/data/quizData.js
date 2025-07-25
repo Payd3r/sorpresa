@@ -16,7 +16,7 @@ export const quizQuestions = [
   },
   {
     id: 2,
-    question: "Il mio dolce preferito?",
+    question: "Che dolce prenderei io?",
     correctAnswer: 1,
     images: [
       "/img/1/1.jpg", // Parigi
@@ -76,7 +76,7 @@ export const quizQuestions = [
   },
   {
     id: 7,
-    question: "Film visto al cinema la prima volta?",
+    question: "Il Film che abbiamo visto al cinema la prima volta?",
     correctAnswer: 2,
     images: [
       "/img/6/1.jpg", // Parigi
