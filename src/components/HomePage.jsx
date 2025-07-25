@@ -43,23 +43,23 @@ const HomePage = () => {
         <CardContent className="p-8 text-center">
           {/* Titolo animato */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 mb-4 animate-pulse">
-              💕 Challenge for you 💕
+            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 mb-0 animate-pulse pb-2">
+              💕 Ciao Cucciola! 💕
             </h1>
           </div>
 
           {/* Messaggio introduttivo */}
           <div className="space-y-6 mb-8">
             <p className="text-xl font-semibold text-slate-800 leading-relaxed">
-              Ciao cucciola! 
+              Sembra incredibile ma è già il secondo anno che festeggiamo il tuo compleanno insieme. Sono successe e cambiate tantissime cose ma noi comunque siamo più forti che mai, saranno probabilmente stati quei quattro mesi in canada ad aiutare. Non ho tanto da dirti oltre che ti amo tantissimo e questa cosa non cambierà mai, che me sei sempre fantastica in qualsiasi situazione e che ai miei occhi non hai difetti. Giusto un piccolo reminder che ogni tanto ci sta sempre. Goditi pure la sorpresa che ho preparato per te...              
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
               Ho preparato per te una serie di sfide speciali piene dei nostri ricordi più belli. 
-              Ogni sfida superata ti porterà sempre più vicino a una sorpresa che ho pensato per te! 
+              Ogni sfida superata ti porterà sempre più vicina alla sorpresa, vedi di non sbagliare altrimenti ti toccherà aspettare l'anno prossimo!
             </p>
             
             {/* Info sulle sfide */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border-2 border-blue-200">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 pt-2 pb-6 px-6 rounded-lg border-2 border-blue-200">
               <h3 className="text-lg font-bold text-blue-800 mb-3">🎮 Le tue sfide:</h3>
               <div className="space-y-2 text-left">
                 <div className="flex items-center text-blue-700">
@@ -72,7 +72,7 @@ const HomePage = () => {
                 </div>
                 <div className="flex items-center text-pink-700">
                   <span className="w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
-                  <span>La tua sorpresa finale! 🎁</span>
+                  <span>La tua sorpresa finale!</span>
                 </div>
               </div>
             </div>
