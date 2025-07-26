@@ -8,7 +8,7 @@ const FinalGiftPage = () => {
 
   const itinerary = [
     {
-      day: "Giorno 1: Mercoledì 07 Novembre",
+      day: "Giorno 1: Venerdi 07 Novembre",
       title: "Arrivo e Magia a Montmartre",
       activities: [
         { text: "Partenza da Milano Malpensa (MXP) e arrivo a Parigi (BVA).", icon: <Plane className="h-5 w-5 text-blue-500" /> },
@@ -20,13 +20,13 @@ const FinalGiftPage = () => {
       imagePlaceholder: "/img/img1.jpg"
     },
     {
-      day: "Giorno 2: Giovedì 08 Novembre",
+      day: "Giorno 2: Sabato 08 Novembre",
       title: "Arte, Giardini e la Dama di Ferro",
       activities: [
         { text: "Mattinata al Museo del Louvre: alla scoperta di capolavori come la Gioconda e la Venere di Milo.", icon: <Landmark className="h-5 w-5 text-purple-500" /> },
         { text: "Passeggiata rilassante nei Giardini delle Tuileries.", icon: <MapPin className="h-5 w-5 text-red-500" /> },
         { text: "Pomeriggio al Museo d'Orsay, per ammirare i capolavori dell'Impressionismo.", icon: <Landmark className="h-5 w-5 text-purple-500" /> },
-        { text: "Crociera serale sui Bateaux-Mouches per ammirare Parigi dal fiume. ", icon: <Ship className="h-5 w-5 text-teal-500" /> },        
+        { text: "Passeggiata serale sui Bateaux-Mouches per ammirare Parigi dal fiume. ", icon: <Ship className="h-5 w-5 text-teal-500" /> },        
         { text: "Serata magica: la Tour Eiffel e la Senna!", icon: <Heart className="h-5 w-5 text-pink-500" /> },
       ],
       imagePlaceholder: "/img/img2.jpg"
@@ -89,6 +89,8 @@ const FinalGiftPage = () => {
             Parigi!
           </motion.h2>
           <p className="mt-4 text-lg text-gray-600">Vediamo se Duolingo ti ha insegnato abbastanza bene il francese</p>
+          <p className="mt-4 text-lg text-gray-600"> N.B. L'itinerario è modificabile</p>
+
         </motion.div>
 
         {/* --- Dettagli del Viaggio --- */}
@@ -106,12 +108,12 @@ const FinalGiftPage = () => {
               <div className="flex flex-col items-center">
                 <Calendar className="h-10 w-10 text-red-500 mb-2" />
                 <h3 className="font-bold text-lg">Date</h3>
-                <p className="text-gray-600">07 - 09 Novembre 2024</p>
+                <p className="text-gray-600">07 - 09 Novembre 2025</p>
               </div>
               <div className="flex flex-col items-center">
                 <Home className="h-10 w-10 text-green-500 mb-2" />
                 <h3 className="font-bold text-lg">Alloggio</h3>
-                <p className="text-gray-600">Un romantico appartamento tutto per noi</p>
+                <p className="text-gray-600">Un appartamento tutto per noi</p>
               </div>
             </CardContent>
           </Card>

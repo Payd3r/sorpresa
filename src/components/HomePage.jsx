@@ -51,7 +51,7 @@ const HomePage = () => {
           {/* Messaggio introduttivo */}
           <div className="space-y-6 mb-8">
             <p className="text-xl font-semibold text-slate-800 leading-relaxed">
-              Sembra incredibile ma è già il secondo anno che festeggiamo il tuo compleanno insieme. Sono successe e cambiate tantissime cose ma noi comunque siamo più forti che mai, saranno probabilmente stati quei quattro mesi in canada ad aiutare. Non ho tanto da dirti oltre che ti amo tantissimo e questa cosa non cambierà mai, che me sei sempre fantastica in qualsiasi situazione e che ai miei occhi non hai difetti. Giusto un piccolo reminder che ogni tanto ci sta sempre. Goditi pure la sorpresa che ho preparato per te...              
+              Sembra incredibile ma è già il secondo anno che festeggiamo il tuo compleanno insieme. Sono successe e cambiate tantissime cose ma noi comunque siamo più forti che mai, saranno probabilmente stati quei quattro mesi in Canada ad aiutare. Non ho tanto da dirti oltre che ti amo tantissimo e questa cosa non cambierà mai, che sei sempre fantastica in qualsiasi situazione e che ai miei occhi non hai difetti. Giusto un piccolo reminder che ogni tanto ci sta sempre.   
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
               Ho preparato per te una serie di sfide speciali piene dei nostri ricordi più belli. 
