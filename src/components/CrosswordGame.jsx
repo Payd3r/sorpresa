@@ -329,13 +329,13 @@ const CrosswordGame = () => {
           >
             {isCompleted ? '🎉 Conferma!' : 'Conferma'}
           </Button>
-          {/* <Button
+           <Button
             onClick={fillAllCells}
             variant="outline"
             className="text-sm py-3 px-4 rounded-lg shadow-md border-orange-400 text-orange-700 hover:bg-orange-50 transition-transform transform hover:scale-105"
           >
             🔧 Debug
-          </Button> */}
+          </Button> 
         </div>
       </div>
 
