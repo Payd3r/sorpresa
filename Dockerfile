@@ -1,20 +1,29 @@
-# Usa un'immagine Node ufficiale
-FROM node:20-alpine
+# ===============================================================
+# STAGE 1: Build - Costruisce i file statici
+# ===============================================================
+FROM node:20-alpine AS builder
 
-# Imposta la directory di lavoro
 WORKDIR /app
 
-# Copia i file di configurazione
+# Copia i file di package e installa le dipendenze
 COPY package.json yarn.lock ./
-
-# Installa le dipendenze
 RUN yarn install
 
-# Copia tutto il resto del codice
+# Copia il resto del codice sorgente
 COPY . .
 
-# Espone la porta 3000
-EXPOSE 80
+# Esegui il comando di build che crea la cartella 'dist' (o 'build')
+RUN yarn build
 
-# Avvia l'applicazione
-CMD ["yarn", "start", "--", "--port", "80"]
+
+# ===============================================================
+# STAGE 2: Production - Serve i file con Nginx sulla porta 80
+# ===============================================================
+FROM nginx:1.25-alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Assicurati che questa riga sia presente e non commentata
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
