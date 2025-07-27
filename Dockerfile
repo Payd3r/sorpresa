@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 80
 
 # Avvia l'applicazione
-CMD ["yarn", "start"] 
+CMD ["yarn", "start", "--", "--port", "80"]
