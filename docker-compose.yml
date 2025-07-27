@@ -2,15 +2,13 @@ version: '3.8'
 services:
   frontend:
     build: .
-    ports:
-      - "3021:3000"
     container_name: sorpresa-frontend
     volumes:
       - .:/app
       - /app/node_modules 
     networks:
       - web-proxy
-      
+
 networks:
   web-proxy:
     external: true
