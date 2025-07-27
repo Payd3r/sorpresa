@@ -7,12 +7,12 @@ export const crosswordData = {
     { word: "MUSO", clue: "Cosa fai almeno una volta quando ci vediamo", direction: "horizontal" },
     { word: "TESLA", clue: "La mia auto preferita", direction: "horizontal" },
     { word: "DUMBO", clue: "Quartiere di brooklyn dove abbiamo fatto colazione", direction: "horizontal" },
-    { word: "CANTU", clue: "Dove era questo specchio", direction: "horizontal", image: "11.jpg"  },
+    { word: "CANTU", clue: "Dove era questo specchio", direction: "horizontal", image: "11.jpg" },
     { word: "CARBONARA", clue: "Cosa ti ho cucinato la prima sera a montreal", direction: "horizontal" },
     { word: "SEGRINO", clue: "Il lago più pulito d'europa", direction: "horizontal" },
     { word: "LECCO", clue: "Dove siamo andati il 29 dic 2024 a vedere le lucine", direction: "horizontal" },
     { word: "NADAL", clue: "Cognome del mio tennista preferito", direction: "horizontal" },
-    { word: "LOOKOUT", clue: "Su che grattacielo siamo saliti a londra", direction: "horizontal"},
+    { word: "LOOKOUT", clue: "Su che grattacielo siamo saliti a londra", direction: "horizontal" },
     { word: "GHEMMA", clue: "Vino rosso riserva che abbiamo provato", direction: "horizontal" },
     { word: "VERONA", clue: "Dove eri in questa foto", direction: "horizontal", image: "42.jpg" },
     { word: "SUSA", clue: "Qual è la porta più famosa di torino", direction: "horizontal" },
@@ -28,11 +28,11 @@ export const crosswordData = {
     { word: "QUARANTANOVE", clue: "Quando mi sono pesato a londra nel museo, quanti elefanti pesavo?", direction: "horizontal" },
     { word: "MARRACASH", clue: "Artista il cui concerto non voglio andare", direction: "horizontal" },
     { word: "CICLISMO", clue: "Il mio sport preferito", direction: "horizontal" },
-    
+
     // Verticali
     { word: "GUERNICA", clue: "Nome del quadro di Picasso che mi hai fatto indovinare", direction: "vertical" },
     { word: "FUMO", clue: "L'abitudine che più odi di me", direction: "vertical" },
-    { word: "SIRMIONE", clue: "Dove eravamo in questa foto", direction: "vertical" },
+    { word: "SIRMIONE", clue: "Dove eravamo in questa foto", direction: "vertical", image: "29.jpg" },
     { word: "SFERA", clue: "Artista del primo concerto assieme", direction: "vertical" },
     { word: "DICEMBRE", clue: "Il mese in cui abbiamo fatto sesso la prima volta", direction: "vertical" },
     { word: "BONDONE", clue: "Nome della montagna di Vason", direction: "vertical" },
@@ -48,7 +48,7 @@ export const crosswordData = {
     { word: "VINSANTO", clue: "Cosa abbiamo preso di dolce a Nervi il secondo giorno", direction: "vertical" },
     { word: "RIETI", clue: "Città che ha sfidato il cantù la sera che non sono venuto a guardare", direction: "vertical" },
     { word: "BIODOLA", clue: "Spiaggia di sabbia isola d'elba", direction: "vertical" },
-    { word: "TOANLE3000", clue: "Questa foto dov'è stata fatta", direction: "vertical" , image: "8.jpg"},
+    { word: "TOANLE", clue: "Questa foto dov'è stata fatta", direction: "vertical", image: "8.jpg" },
     { word: "CINQUE", clue: "Quante volte siamo andati in palestra assieme", direction: "vertical" },
     { word: "TORINO", clue: "In che città abbiamo letto sul muretto \"The right place to say I Love You\"", direction: "vertical" }
   ]
