@@ -3,9 +3,6 @@ services:
   frontend:
     build: .
     container_name: sorpresa-frontend
-    volumes:
-      - .:/app
-      - /app/node_modules 
     networks:
       - web-proxy
 
