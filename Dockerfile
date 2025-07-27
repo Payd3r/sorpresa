@@ -20,7 +20,7 @@ RUN yarn build
 # STAGE 2: Production - Serve i file con Nginx sulla porta 80
 # ===============================================================
 FROM nginx:1.25-alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 # Assicurati che questa riga sia presente e non commentata
 COPY nginx.conf /etc/nginx/conf.d/default.conf
