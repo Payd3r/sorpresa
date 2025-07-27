@@ -14,7 +14,7 @@ RUN yarn install
 COPY . .
 
 # Espone la porta 3000
-EXPOSE 3000
+EXPOSE 80
 
 # Avvia l'applicazione
 CMD ["yarn", "start"] 
